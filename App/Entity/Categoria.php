@@ -5,46 +5,35 @@ namespace App\Entity;
 use \App\Db\Database;
 use \PDO;
 
-
-
-
-// mudar dados
-
-class Noticia
+class Categoria
 {
     /** 
-     * Identificador único da noticia
+     * Identificador único da Categoria
      * @var integer
      */
     public $id;
 
     /** 
-     * Título da noticia
+     * Título da Categoria
      * @var string
      */
-    public $titulo;
+    public $nome;
 
     /** 
-     * Descrição da noticia (pode conter html)
+     * Descrição da Categoria (pode conter html)
      * @var string
      */
     public $descricao;
 
     /** 
-     * Autor da noticia
-     * @var string
+     * Autor da Categoria
+     * @var int
      */
-    public $autor;
+    public $ordem;
 
-
-    /** 
-     * Data da publicação da noticia
-     * @var timestamp
-     */
-    public $data;
     
     /** 
-     * Define se a noticia está ativa (s or n)
+     * Define se a Categoria está ativa (s or n)
      * @var string
      */
     public $status;
@@ -52,7 +41,7 @@ class Noticia
     
 
     /** 
-     * Função para cadastrar a noticia no banco
+     * Função para cadastrar a Categoria no banco
      * @var boolean
      */
 
@@ -60,14 +49,13 @@ class Noticia
     {
         // echo "<pre>"; print_r($this); echo "</pre>"; exit;
 
-        //Inserir a noticia no banco e retornar o ID
-        $objDatabase = new Database('noticias');
+        //Inserir a Categoria no banco e retornar o ID
+        $objDatabase = new Database('categorias');
         $this->id = $objDatabase->insert([
-            'titulo' => $this->titulo,
+            'nome' => $this->nome,
             'descricao' => $this->descricao,
-            'autor'=> $this->autor,
+            'ordem'=> $this->ordem,
             'status' => $this->status,
-            'data' => $this->data,
         ]);
         //echo "<pre>"; print_r($this); echo "</pre>"; exit;
 
@@ -76,7 +64,7 @@ class Noticia
     }
 
     /**
-     * Método responsável por obter as noticias do banco de dados
+     * Método responsável por obter as Categorias do banco de dados
 
      *@params string $where 
      *@params string $order
@@ -84,58 +72,54 @@ class Noticia
      *@return array
      */
 
-    public static function getNoticias($where = null, $order = null, $limit = null)
+    public static function getCategorias($where = null, $order = null, $limit = null)
     {
 
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('categorias');
 
         return ($objDatabase)->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 
     /**
-     * Método responsável por obter as noticias do banco de dados
+     * Método responsável por obter as Categorias do banco de dados
 
      *@params int $id
-     *@return Noticia
+     *@return Categoria
      */
 
-    public static function getNoticia($id)
+    public static function getCategoria($id)
     {
 
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('categorias');
 
         return ($objDatabase)->select('id = ' . $id)->fetchObject(self::class);
     }
 
     /**
-     * Função para excluir noticias no banco
+     * Função para excluir Categorias no banco
      *@return boolean
      */
 
     public function excluir()
     {
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('categorias');
 
         return ($objDatabase)->delete('id =' . $this->id);
     }
 
     /** 
-     * Função para atualizar a noticia no banco 
+     * Função para atualizar a Categoria no banco 
      * @return boolean
      */
     public function atualizar()
     {
-        //Definir a data
-        $this->data = date('Y-m-d');
-
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('categorias');
 
         return ($objDatabase)->update('id = ' . $this->id, [
-            'titulo' => $this->titulo,
+            'nome' => $this->nome,
             'descricao' => $this->descricao,
-            'autor'=> $this->autor,
+            'ordem'=> $this->ordem,
             'status' => $this->status,
-            'data' => $this->data,
         ]);
     }
 }

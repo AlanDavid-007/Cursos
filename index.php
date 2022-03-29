@@ -1,7 +1,8 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-
+<?php
+//adaptar
 use \App\Entity\Noticia;
 
 $noticias = Noticia::getNoticias();

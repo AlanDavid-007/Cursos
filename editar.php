@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-
+<?php
+//adaptar
 define('TITLE', 'Editar Noticia');
 
 use \App\Entity\Noticia;
