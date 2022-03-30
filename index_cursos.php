@@ -2,6 +2,8 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+define('TITLE', 'Cadastro de Cursos');
+
 use \App\Entity\Curso;
 
 $cursos = Curso::getCursos();
@@ -9,7 +11,7 @@ $cursos = Curso::getCursos();
 
 require __DIR__ . '/INCLUDES/header.php';
 
-require __DIR__ . '/INCLUDES/listagemCursos.php';
+require __DIR__ . '/INCLUDES/listagem_cursos.php';
 
 require __DIR__ . '/INCLUDES/footer.php';
 ?>

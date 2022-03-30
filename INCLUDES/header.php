@@ -16,7 +16,7 @@
       <div class="container">
           <header class="jumbotron bg-primary" style="display: inline-flex; width: 100%;">
           <div class="texts">
-                <h1>Cadastro de Cursos</h1>
+                <h1><?php echo TITLE ?></h1>
                 <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
                 </div>
                 <a href="cadastrar" style="padding:20px; margin-left:30%;">

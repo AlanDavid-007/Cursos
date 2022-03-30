@@ -69,10 +69,11 @@ class Curso
         $objDatabase = new Database('cursos');
         $this->id = $objDatabase->insert([
             'nome' => $this->nome,
-            'data' => $this->data,
             'palavra_chave' => $this->palavra_chave,
             'valor'=> $this->valor,
             'ordem'=> $this->ordem,
+            'professor'=> $this->professor,
+            'data' => $this->data,
             'status' => $this->status,
             
         ]);
@@ -139,10 +140,11 @@ class Curso
 
         return ($objDatabase)->update('id = ' . $this->id, [
             'nome' => $this->nome,
-            'data' => $this->data,
             'palavra_chave' => $this->palavra_chave,
             'valor'=> $this->valor,
             'ordem'=> $this->ordem,
+            'professor'=> $this->professor,
+            'data' => $this->data,
             'status' => $this->status,
         ]);
     }

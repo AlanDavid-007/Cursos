@@ -2,6 +2,8 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+define('TITLE', 'Cadastro de Professores');
+
 use \App\Entity\Professor;
 
 $professores = Professor::getProfessores();
@@ -9,7 +11,7 @@ $professores = Professor::getProfessores();
 
 require __DIR__ . '/INCLUDES/header.php';
 
-require __DIR__ . '/INCLUDES/listagemProfessores.php';
+require __DIR__ . '/INCLUDES/listagem_professores.php';
 
 require __DIR__ . '/INCLUDES/footer.php';
 ?>

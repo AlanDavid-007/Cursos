@@ -19,6 +19,7 @@ CREATE TABLE `cursos` (
   `palavra_chave`VARCHAR(30)DEFAULT NULL,
   `valor` FLOAT (50) DEFAULT NULL,
   `ordem` INT DEFAULT NULL,
+  `professor` varchar(255) DEFAULT NULL,
   `status` enum('s','n') DEFAULT NULL,
   PRIMARY KEY (`id`)
 );

@@ -2,8 +2,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastrar Noticia');
-<?php
-//adaptar
+
 use \App\Entity\Noticia;
 
 $obNoticia = new Noticia;
@@ -28,3 +27,4 @@ require __DIR__ . '/INCLUDES/header.php';
 require __DIR__ . '/INCLUDES/formulario.php';
 
 require __DIR__ . '/INCLUDES/footer.php';
+?>
