@@ -1,6 +1,6 @@
 <!-- adaptar para curso, categoria e professor - criar tres formularios separados -->
 
-<!-- <section>
+<section>
     <a href="index">
         <button class="btn btn-success">Voltar</button>
     </a>
@@ -9,20 +9,16 @@
 
     <form method="post" class="form-send">
         <div class="form-group">
-            <label>Título</label>
-            <input type="text" required class="form-control" name="titulo" value="<?php echo isset($obNoticia->titulo) ? $obNoticia->titulo : ''; ?>">
+            <label>Nome</label>
+            <input type="text" required class="form-control" name="Nome" value="<?php echo isset($obNoticia->Nome) ? $obNoticia->Nome : ''; ?>">
         </div>
         <div class="form-group">
             <label>Descrição</label>
             <textarea class="form-control" required name="descricao" rows="5"><?php echo isset($obNoticia->descricao) ? $obNoticia->descricao : ''; ?></textarea>
         </div>
-        <div class="form-group">
-            <label>Data</label>
-            <input type="date" required class="form-control" name="data" value="<?php echo isset($obNoticia->data) ? date('Y-m-d',strtotime($obNoticia->data)) : ''; ?>">     
-        </div>
-        <div class="form-group">
-            <label>Autor</label>
-            <textarea class="form-control" required name="autor" rows="1"><?php echo isset($obNoticia->autor) ? $obNoticia->autor : ''; ?></textarea>
+          <div class="form-group">
+            <label>Ordem</label>
+            <textarea class="form-control" required name="Ordem" rows="1"><?php echo isset($obNoticia->Ordem) ? $obNoticia->Ordem : ''; ?></textarea>
         </div>
         <div class="form-group">
             <label>Status</label>
