@@ -10,41 +10,41 @@ use \PDO;
 
 // mudar dados
 
-class Noticia
+class cursos
 {
     /** 
-     * Identificador único da noticia
+     * Identificador único da cursos
      * @var integer
      */
     public $id;
 
     /** 
-     * Título da noticia
+     * Título da cursos
      * @var string
      */
     public $titulo;
 
     /** 
-     * Descrição da noticia (pode conter html)
+     * Descrição da cursos (pode conter html)
      * @var string
      */
     public $descricao;
 
     /** 
-     * Autor da noticia
+     * Autor da cursos
      * @var string
      */
     public $autor;
 
 
     /** 
-     * Data da publicação da noticia
+     * Data da publicação da cursos
      * @var timestamp
      */
     public $data;
     
     /** 
-     * Define se a noticia está ativa (s or n)
+     * Define se a cursos está ativa (s or n)
      * @var string
      */
     public $status;
@@ -52,7 +52,7 @@ class Noticia
     
 
     /** 
-     * Função para cadastrar a noticia no banco
+     * Função para cadastrar a cursos no banco
      * @var boolean
      */
 
@@ -60,8 +60,8 @@ class Noticia
     {
         // echo "<pre>"; print_r($this); echo "</pre>"; exit;
 
-        //Inserir a noticia no banco e retornar o ID
-        $objDatabase = new Database('noticias');
+        //Inserir a cursos no banco e retornar o ID
+        $objDatabase = new Database('cursoss');
         $this->id = $objDatabase->insert([
             'titulo' => $this->titulo,
             'descricao' => $this->descricao,
@@ -76,7 +76,7 @@ class Noticia
     }
 
     /**
-     * Método responsável por obter as noticias do banco de dados
+     * Método responsável por obter as cursoss do banco de dados
 
      *@params string $where 
      *@params string $order
@@ -84,43 +84,43 @@ class Noticia
      *@return array
      */
 
-    public static function getNoticias($where = null, $order = null, $limit = null)
+    public static function getcursoss($where = null, $order = null, $limit = null)
     {
 
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('cursoss');
 
         return ($objDatabase)->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 
     /**
-     * Método responsável por obter as noticias do banco de dados
+     * Método responsável por obter as cursoss do banco de dados
 
      *@params int $id
-     *@return Noticia
+     *@return cursos
      */
 
-    public static function getNoticia($id)
+    public static function getcursos($id)
     {
 
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('cursoss');
 
         return ($objDatabase)->select('id = ' . $id)->fetchObject(self::class);
     }
 
     /**
-     * Função para excluir noticias no banco
+     * Função para excluir cursoss no banco
      *@return boolean
      */
 
     public function excluir()
     {
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('cursoss');
 
         return ($objDatabase)->delete('id =' . $this->id);
     }
 
     /** 
-     * Função para atualizar a noticia no banco 
+     * Função para atualizar a cursos no banco 
      * @return boolean
      */
     public function atualizar()
@@ -128,7 +128,7 @@ class Noticia
         //Definir a data
         $this->data = date('Y-m-d');
 
-        $objDatabase = new Database('noticias');
+        $objDatabase = new Database('cursoss');
 
         return ($objDatabase)->update('id = ' . $this->id, [
             'titulo' => $this->titulo,
