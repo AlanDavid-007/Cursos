@@ -1,23 +1,23 @@
 <!-- adaptar para exclusão de curso, categoria e professor -->
-<!-- <section>
+ <section>
     <a href="index.php">
         <button class="btn btn-success">Voltar</button>
     </a>
 
-    <h2 class="mt-3">Excluir Notícia</h2>
+    <h2 class="mt-3">Excluir <?php echo TEXT ?></h2>
     <form method="post">
         <div class="form-group">
-            <p>Você deseja realmente excluir a Notícia
-                <strong><?php echo $obNoticia->titulo; ?></strong>
+            <p>Você deseja realmente excluir a <?php echo TEXT ?>
+                <strong><?php echo OB ?></strong>
             </p>
         </div>
 
         <div class="form-group">
-            <a href="index.php">
-                <button class="btn btn-secondary"><a href="index.php" style="text-decoration: none; color: white;">Cancelar</a></button>
+            <a href="<?php echo HREF2 ?>">
+                <button class="btn btn-secondary"><a href="<?php echo HREF2 ?>" style="text-decoration: none; color: white;">Cancelar</a></button>
             </a>
             <button type="submit" name="excluir" class="btn btn-danger">Excluir</button>
         </div>
     </form>
 
-</section> -->
+</section> 

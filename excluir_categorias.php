@@ -2,6 +2,10 @@
 //adaptar
 require __DIR__ . '/vendor/autoload.php';
 
+define('CATEGORIA', '$obCategoria->nome;');
+define('HREF2', 'index_categorias.php');
+define('TEXT', 'Categoria');
+
 use \App\Entity\Noticia;
 
 //Validação do ID
