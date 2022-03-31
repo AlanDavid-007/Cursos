@@ -3,6 +3,8 @@
 require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastro de Professores');
+define('HREF', 'cadastrar_professores.php');
+define('BUTTONTEXT', 'professor');
 
 use \App\Entity\Professor;
 

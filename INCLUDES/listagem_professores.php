@@ -30,7 +30,7 @@ if (isset($_GET['status'])) {
 <section>
 
     <?php if (count($professores) == 0) { ?>
-        <div class="alert alert-secondary mt-3">Nenhuma Categoria encontrada</div>
+        <div class="alert alert-secondary mt-3">Nenhum Professor encontrado</div>
     <?php } else { ?>
         <table class="table text-light mt-3 " id="table-listagem">
             <thead>

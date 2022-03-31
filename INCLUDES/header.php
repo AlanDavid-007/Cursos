@@ -19,8 +19,8 @@
                 <h1><?php echo TITLE ?></h1>
                 <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
                 </div>
-                <a href="cadastrar" style="padding:20px; margin-left:30%;">
-        <button class="btn btn-success btn-lg">Cadastrar</button>
+                <a href="<?php echo HREF ?>" style="padding:20px; margin-left:30%;">
+        <button class="btn btn-success btn-lg" >Cadastrar <?php echo BUTTONTEXT ?></button>
     </a>
             </header>   
 

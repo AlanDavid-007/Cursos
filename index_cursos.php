@@ -3,6 +3,8 @@
 require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastro de Cursos');
+define('HREF', 'cadastrar_cursos.php');
+define('BUTTONTEXT', 'curso');
 
 use \App\Entity\Curso;
 
