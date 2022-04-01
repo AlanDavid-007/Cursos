@@ -1,14 +1,14 @@
 <!-- adaptar para exclusão de curso, categoria e professor -->
- <section>
-    <a href="index.php">
+<section>
+    <a href="index_professores.php">
         <button class="btn btn-success">Voltar</button>
     </a>
 
     <h2 class="mt-3">Excluir <?php echo TEXT ?></h2>
     <form method="post">
         <div class="form-group">
-            <p>Você deseja realmente excluir a <?php echo TEXT ?>
-                <strong><?php echo OB ?></strong>
+            <p>Você deseja realmente excluir o <?php echo TEXT ?>
+                <strong><?php echo $obProfessor->nome; ?></strong>
             </p>
         </div>
 

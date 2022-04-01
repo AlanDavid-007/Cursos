@@ -3,7 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastrar Professores');
 define('HREF', 'cadastrar_professores.php');
-define('BUTTONTEXT', 'professor');
+define('BUTTONTEXT', 'Cadastrar Professor');
 
 use \App\Entity\Professor;
 
@@ -28,7 +28,7 @@ if (isset($_POST['nome'],$_POST['sobrenome'],$_POST['cpf'],$_POST['formacao'],$_
     exit;
 }
 
-require __DIR__ . '/INCLUDES/header.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
 
 require __DIR__ . '/INCLUDES/formulario_professores.php';
 

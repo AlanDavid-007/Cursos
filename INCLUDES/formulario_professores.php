@@ -1,6 +1,6 @@
 <!-- adaptar para Professor, Professor e professor - criar tres formularios separados -->
 
-<section>
+<section class="formulario">
     <a href="index_professores.php">
         <button class="btn btn-success">Voltar</button>
     </a>
@@ -70,4 +70,4 @@
             <button type="submit" class="btn btn-success">Enviar</button>
         </div>
     </form>
-</section> -->
+</section> 

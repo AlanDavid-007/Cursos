@@ -1,6 +1,6 @@
 <!-- adaptar para curso, categoria e professor - criar tres formularios separados -->
 
-<section>
+<section class="formulario">
     <a href="index_categorias.php">
         <button class="btn btn-success">Voltar</button>
     </a>

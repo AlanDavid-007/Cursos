@@ -53,11 +53,11 @@ if (isset($_GET['status'])) {
                         <td><?php echo $value->ordem; ?></td>
                         <td><?php echo ($value->status == 's' ? 'Ativo' : 'Inativo'); ?></td>
                         <td>
-                            <a href="editar.php?id=<?php echo $value->id; ?>">
+                            <a href="editar_categorias.php?id=<?php echo $value->id; ?>">
                                 <button type="button" class="btn btn-primary">Editar</button>
                             </a>
 
-                            <a href="excluir.php?id=<?php echo $value->id; ?>">
+                            <a href="excluir_categorias.php?id=<?php echo $value->id; ?>">
                                 <button type="button" class="btn btn-danger">Excluir</button>
                             </a>
 

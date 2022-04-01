@@ -9,7 +9,6 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS/styles.css">
-  <script src="JS/body.js"></script>
   <title>Cursos</title>
 
 </head>
@@ -45,32 +44,11 @@
                     </div>
     
                     <div class="nav__social">
-                        <a href="https://github.com/AlanDavid-007/Cursos/" class="nav__social-icon"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="#" class="nav__social-icon"><ion-icon name="logo-github"></ion-icon></a>
                     </div>
                 </div>
             </nav>
         </header>
-  <div class="hr">
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-</div>
-        <section class="header2 m-auto d-flex p-2 bd-highlight" >
-      <div class="texts">
-        <h1><?php echo TITLE ?></h1>
-        <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
-      </div>
-
-      <a class="m-auto" href="<?php echo HREF ?>" style="padding:20px; margin-left:30%;">
-        <button class="btn btn-success btn-lg"><?php echo BUTTONTEXT ?></button>
-      </a>
-    </section> 
 
         <!-- ===== IONICONS ===== -->
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>

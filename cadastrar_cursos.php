@@ -3,7 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastrar Cursos');
 define('HREF', 'cadastrar_cursos.php');
-define('BUTTONTEXT', 'curso');
+define('BUTTONTEXT', 'Cadastrar Curso');
 
 use \App\Entity\Curso;
 
@@ -26,7 +26,7 @@ if (isset($_POST['nome'], $_POST['palavra_chave'],$_POST['valor'], $_POST['ordem
     exit;
 }
 
-require __DIR__ . '/INCLUDES/header.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
 
 require __DIR__ . '/INCLUDES/formulario_cursos.php';
 

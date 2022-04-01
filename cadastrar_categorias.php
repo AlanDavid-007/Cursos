@@ -3,7 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastrar Categoria');
 define('HREF', 'cadastrar_categorias.php');
-define('BUTTONTEXT', 'categoria');
+define('BUTTONTEXT', ' Cadastrar Categoria');
 
 //adaptar
 use \App\Entity\Categoria;
@@ -24,7 +24,7 @@ if (isset($_POST['nome'], $_POST['descricao'], $_POST['ordem'], $_POST['status']
     exit;
 }
 
-require __DIR__ . '/INCLUDES/header.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
 
 require __DIR__ . '/INCLUDES/formulario_categorias.php';
 

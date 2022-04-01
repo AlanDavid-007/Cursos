@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-<?php
 //adaptar
 define('TITLE', 'Editar Curso');
 
@@ -39,7 +38,7 @@ if (isset($_POST['nome'], $_POST['palavra_chave'],$_POST['valor'], $_POST['ordem
 }
 
 
-require __DIR__ . '/INCLUDES/header.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
 
 require __DIR__ . '/INCLUDES/formulario_cursos.php';
 

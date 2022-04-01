@@ -32,7 +32,7 @@ if (isset($_GET['status'])) {
     <?php if (count($professores) == 0) { ?>
         <div class="alert alert-secondary mt-3">Nenhum Professor encontrado</div>
     <?php } else { ?>
-        <table class="table text-light mt-3 " id="table-listagem">
+        <table class="table text-light mt-5 " id="table-listagem">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -63,11 +63,11 @@ if (isset($_GET['status'])) {
                         <td><?php echo $value->ordem; ?></td>
                         <td><?php echo ($value->status == 's' ? 'Ativo' : 'Inativo'); ?></td>
                         <td>
-                            <a href="editar.php?id=<?php echo $value->id; ?>">
+                            <a href="editar_professores.php?id=<?php echo $value->id; ?>">
                                 <button type="button" class="btn btn-primary">Editar</button>
                             </a>
 
-                            <a href="excluir.php?id=<?php echo $value->id; ?>">
+                            <a href="excluir_professores.php?id=<?php echo $value->id; ?>">
                                 <button type="button" class="btn btn-danger">Excluir</button>
                             </a>
                         </td>
@@ -76,4 +76,4 @@ if (isset($_GET['status'])) {
             </tbody>
         </table>
     <?php } ?>
-</section> -->
+</section> 

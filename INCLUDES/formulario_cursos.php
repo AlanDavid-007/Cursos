@@ -1,6 +1,6 @@
 <!-- adaptar para curso, Curso e professor - criar tres formularios separados -->
 
-<section>
+<section class="formulario">
     <a href="index_cursos.php">
         <button class="btn btn-success">Voltar</button>
     </a>
@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <label>Data</label>
-            <input type="date" required class="form-control" name="data" value="<?php echo isset($obNoticia->data) ? date('Y-m-d',strtotime($obNoticia->data)) : ''; ?>">     
+            <input type="date" required class="form-control" name="data" value="<?php echo isset($obCurso->data) ? date('Y-m-d',strtotime($obCurso->data)) : ''; ?>">     
         </div>
 
         <div class="form-group">
@@ -60,4 +60,4 @@
             <button type="submit" class="btn btn-success">Enviar</button>
         </div>
     </form>
-</section> -->
+</section> 

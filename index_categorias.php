@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 define('TITLE', 'Cadastro de Categorias');
 define('HREF', 'cadastrar_categorias.php');
-define('BUTTONTEXT', 'categoria');
+define('BUTTONTEXT', 'Cadastrar Categoria');
 
 
 use \App\Entity\Categoria;

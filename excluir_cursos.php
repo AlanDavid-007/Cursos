@@ -2,7 +2,7 @@
 //adaptar
 require __DIR__ . '/vendor/autoload.php';
 
-define('OB', '$obCurso->nome;');
+define('TITLE', 'Cadastrar Cursos');
 define('HREF2', 'index_cursos.php');
 define('TEXT', 'Curso');
 
@@ -32,6 +32,6 @@ if (isset($_POST['excluir'])) {
     exit;
 }
 
-require __DIR__ . '/INCLUDES/header.php';
-require __DIR__ . '/INCLUDES/confirmarExclusao.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
+require __DIR__ . '/INCLUDES/confirmarExclusao_cursos.php';
 require __DIR__ . '/INCLUDES/footer.php';

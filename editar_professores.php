@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-<?php
 //adaptar
 define('TITLE', 'Editar Professor');
 
@@ -41,7 +40,7 @@ if (isset($_POST['nome'],$_POST['sobrenome'],$_POST['cpf'],$_POST['formacao'],$_
 }
 
 
-require __DIR__ . '/INCLUDES/header.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
 
 require __DIR__ . '/INCLUDES/formulario_professores.php';
 

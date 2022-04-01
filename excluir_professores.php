@@ -2,8 +2,7 @@
 //adaptar
 require __DIR__ . '/vendor/autoload.php';
 
-
-define('OB', '$obProfessor->nome;');
+define('TITLE', 'Cadastrar Professores');
 define('HREF2', 'index_professores.php');
 define('TEXT', 'Professor');
 
@@ -33,6 +32,6 @@ if (isset($_POST['excluir'])) {
     exit;
 }
 
-require __DIR__ . '/INCLUDES/header.php';
-require __DIR__ . '/INCLUDES/confirmarExclusao.php';
+require __DIR__ . '/INCLUDES/header_editar.php';
+require __DIR__ . '/INCLUDES/confirmarExclusao_professores.php';
 require __DIR__ . '/INCLUDES/footer.php';
