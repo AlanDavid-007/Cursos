@@ -3,23 +3,23 @@
 namespace App\Entity;
 
 use \App\Db\Database;
-use \PDO;
+use \pDO;
 
 
 
 
 // mudar dados
 
-class Professor
+class professor
 {
     /** 
-     * Identificador único da Professor
+     * Identificador único da professor
      * @var integer
      */
     public $id;
 
     /** 
-     * Nome da Professor
+     * Nome da professor
      * @var string
      */
     public $nome;
@@ -31,32 +31,32 @@ class Professor
     public $sobrenome;
 
     /** 
-     * CPF da Professor
+     * CpF da professor
      * @var Bigint
      */
     public $cpf;
 
 
     /** 
-     * Formação do Professor
+     * Formação do professor
      * @var varchar
      */
     public $formação;
 
     /** 
-     * Endereço do Professor
+     * Endereço do professor
      * @var varchar
      */
     public $endereco;
 
      /** 
-     * tel da Professor
+     * tel da professor
      * @var Bigint
      */
     public $telefone;
     
      /** 
-     * CPF da Professor
+     * CpF da professor
      * @var varchar
      */
     public $email;
@@ -68,7 +68,7 @@ class Professor
     public $ordem;
 
     /** 
-     * Define se a Professor está ativa (s or n)
+     * Define se a professor está ativa (s or n)
      * @var string
      */
     public $status;
@@ -76,7 +76,7 @@ class Professor
     
 
     /** 
-     * Função para cadastrar a Professor no banco
+     * Função para cadastrar a professor no banco
      * @var boolean
      */
 
@@ -84,8 +84,8 @@ class Professor
     {
         // echo "<pre>"; print_r($this); echo "</pre>"; exit;
 
-        //Inserir a Professor no banco e retornar o ID
-        $objDatabase = new Database('Professores');
+        //Inserir a professor no banco e retornar o ID
+        $objDatabase = new Database('professores');
         $this->id = $objDatabase->insert([
             'nome' => $this->nome,
             'sobrenome' => $this->sobrenome,
@@ -104,7 +104,7 @@ class Professor
     }
 
     /**
-     * Método responsável por obter as Professors do banco de dados
+     * Método responsável por obter as professors do banco de dados
 
      *@params string $where 
      *@params string $order
@@ -115,46 +115,46 @@ class Professor
     public static function getProfessores($where = null, $order = null, $limit = null)
     {
 
-        $objDatabase = new Database('Professores');
+        $objDatabase = new Database('professores');
 
-        return ($objDatabase)->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
+        return ($objDatabase)->select($where, $order, $limit)->fetchAll(pDO::FETCH_CLASS, self::class);
     }
 
     /**
-     * Método responsável por obter as Professors do banco de dados
+     * Método responsável por obter as professors do banco de dados
 
      *@params int $id
-     *@return Professor
+     *@return professor
      */
 
     public static function getProfessor($id)
     {
 
-        $objDatabase = new Database('Professores');
+        $objDatabase = new Database('professores');
 
         return ($objDatabase)->select('id = ' . $id)->fetchObject(self::class);
     }
 
     /**
-     * Função para excluir Professors no banco
+     * Função para excluir professors no banco
      *@return boolean
      */
 
     public function excluir()
     {
-        $objDatabase = new Database('Professores');
+        $objDatabase = new Database('professores');
 
         return ($objDatabase)->delete('id =' . $this->id);
     }
 
     /** 
-     * Função para atualizar a Professor no banco 
+     * Função para atualizar a professor no banco 
      * @return boolean
      */
     public function atualizar()
     {
 
-        $objDatabase = new Database('Professores');
+        $objDatabase = new Database('professores');
 
         return ($objDatabase)->update('id = ' . $this->id, [
             'nome' => $this->nome,

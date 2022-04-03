@@ -15,7 +15,7 @@
 
         <div class="form-group">
             <label>Sobrenome</label>
-            <textarea class="form-control" required name="sobrenome" rows="5"><?php echo isset($obProfessor->palavra_chave) ? $obProfessor->palavra_chave : ''; ?></textarea>
+            <textarea class="form-control" required name="sobrenome" rows="5"><?php echo isset($obProfessor->sobrenome) ? $obProfessor->sobrenome : ''; ?></textarea>
         </div>
 
           <div class="form-group">
@@ -45,7 +45,7 @@
 
         <div class="form-group">
             <label>Ordem</label>
-            <textarea class="form-control" required name="ordem" rows="1"><?php echo isset($obProfessor->ordem) ? $obordem->ordem : ''; ?></textarea>
+            <textarea class="form-control" required name="ordem" rows="1"><?php echo isset($obProfessor->ordem) ? $obProfessor->ordem : ''; ?></textarea>
         </div>
 
         <div class="form-group">

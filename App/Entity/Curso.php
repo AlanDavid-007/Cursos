@@ -64,7 +64,7 @@ class Curso
     public function cadastrar()
     {
         // echo "<pre>"; print_r($this); echo "</pre>"; exit;
-
+        $professor = ('SELECT nome FROM professores');
         //Inserir a Curso no banco e retornar o ID
         $objDatabase = new Database('cursos');
         $this->id = $objDatabase->insert([
@@ -72,7 +72,7 @@ class Curso
             'palavra_chave' => $this->palavra_chave,
             'valor'=> $this->valor,
             'ordem'=> $this->ordem,
-            'professor'=> $this->professor,
+            '$professor'=> $this->$professor,
             'data' => $this->data,
             'status' => $this->status,
             
@@ -133,6 +133,7 @@ class Curso
      */
     public function atualizar()
     {
+        $professor = ('SELECT nome FROM professores');
         //Definir a data
         $this->data = date('Y-m-d');
 
@@ -143,7 +144,7 @@ class Curso
             'palavra_chave' => $this->palavra_chave,
             'valor'=> $this->valor,
             'ordem'=> $this->ordem,
-            'professor'=> $this->professor,
+            '$professor'=> $this->$professor,
             'data' => $this->data,
             'status' => $this->status,
         ]);

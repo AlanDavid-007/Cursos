@@ -74,6 +74,7 @@ class Database
         }
     }
 
+    
     /** 
      * Método responsável por executar querys no banco de dados (útil para querys de consulta)
      * @params string query

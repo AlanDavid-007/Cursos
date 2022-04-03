@@ -8,15 +8,16 @@ define('BUTTONTEXT', 'Cadastrar Curso');
 use \App\Entity\Curso;
 
 $obCurso = new Curso;
+$professor = ('SELECT nome FROM professores');
 
 // echo "<pre>"; print_r($_POST['palavra_chave']); echo "</pre>"; exit;
-if (isset($_POST['nome'], $_POST['palavra_chave'],$_POST['valor'], $_POST['ordem'],$_POST['professor'],$_POST['data'], $_POST['status'])) {
+if (isset($_POST['nome'], $_POST['palavra_chave'],$_POST['valor'], $_POST['ordem'],$_POST['$professor'],$_POST['data'], $_POST['status'])) {
 
     $obCurso->nome = $_POST['nome'];
     $obCurso->palavra_chave = $_POST['palavra_chave'];
     $obCurso->valor = $_POST['valor'];
     $obCurso->ordem = $_POST['ordem'];
-    $obCurso->professor = $_POST['professor'];
+    $obCurso->$professor = $_POST['$professor'];
     $obCurso->data = $_POST['data'];
     $obCurso->status = $_POST['status'];
     $obCurso->cadastrar();

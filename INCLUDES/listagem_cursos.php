@@ -48,14 +48,16 @@ if (isset($_GET['status'])) {
             </thead>
 
             <tbody>
-                <?php foreach ($cursos as $key => $value) { ?>
+                <?php foreach ($cursos as $key => $value) { 
+                    $professor = ('SELECT nome FROM professores'); 
+                    ?>
                     <tr>
                         <td><?php echo $value->id; ?></td>
                         <td><?php echo $value->nome; ?></td>
                         <td><?php echo $value->palavra_chave; ?></td>
                         <td><?php echo $value->valor; ?></td>
                         <td><?php echo $value->ordem; ?></td>
-                        <td><?php echo $value->professor; ?></td>
+                        <td><?php echo $value->$professor; ?></td>
                         <td><?php echo $value->data; ?></td>
                         <td><?php echo ($value->status == 's' ? 'Ativo' : 'Inativo'); ?></td>
                         <td>

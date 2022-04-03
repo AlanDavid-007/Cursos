@@ -1,5 +1,4 @@
 <!-- adaptar para curso, Curso e professor - criar tres formularios separados -->
-
 <section class="formulario">
     <a href="index_cursos.php">
         <button class="btn btn-success">Voltar</button>
@@ -28,16 +27,20 @@
             <textarea class="form-control" required name="ordem" rows="1"><?php echo isset($obCurso->ordem) ? $obCurso->ordem : ''; ?></textarea>
         </div>
 
-        <!-- <div class="form-group">
+ <!-- <div class="form-group">
             <label>Professor</label>
-            <select class="form-control" name="professor">
+            <select class="form-control" name="$professor" value="">
                 <option value="">Selecione um Professor</option>
-                    $sql = mysql_query("select * from professores"); //nome da sua tabela
-                    while ($row = mysql_fetch_array($sql)) {
-                    echo '<option value="'.$row['id'].'">'.$row['nome'].'</option>';
-                    }
-                    </select>
-        </div> -->
+               
+                use \App\Db\Database;
+
+                 $professor = mysql_query('SELECT nome FROM professores'); 
+                 while($prod = mysql_fetch_array($professor)) 
+                 <option value="<?php echo $prod['id'] ?>"><?php echo $prod['nome'] ?> </option> 
+                 ?>
+                     
+            </select>
+        </div>  -->
         <div class="form-group">
             <label>Data</label>
             <input type="date" required class="form-control" name="data" value="<?php echo isset($obCurso->data) ? date('Y-m-d',strtotime($obCurso->data)) : ''; ?>">     
