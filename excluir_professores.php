@@ -34,4 +34,4 @@ if (isset($_POST['excluir'])) {
 
 require __DIR__ . '/INCLUDES/header_editar.php';
 require __DIR__ . '/INCLUDES/confirmarExclusao_professores.php';
-require __DIR__ . '/INCLUDES/footer.php';
+--require __DIR__ . '/INCLUDES/footer.php';

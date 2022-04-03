@@ -1,5 +1,5 @@
 <!-- adaptar para exclusão de curso, categoria e professor -->
- <section>
+ <section style="margin-top:10%">
     <a href="index_categorias.php">
         <button class="btn btn-success">Voltar</button>
     </a>

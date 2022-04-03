@@ -17,7 +17,7 @@
 <body class="text-light">
   <div class="container m-auto">
   <header class="header">
-            <a href="index.php" class="header__logo"></a>
+            <a href="../index.php" class="header__logo"></a>
 
             <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
 
@@ -32,7 +32,7 @@
                         </div>
                         
                         <div>
-                            <a href="#" class="nav__name" style="text-decoration: none;">CURSOS</a>
+                            <a href="index.php" class="nav__name" style="text-decoration: none;">CURSOS</a>
                         </div>
                     </div>
     
