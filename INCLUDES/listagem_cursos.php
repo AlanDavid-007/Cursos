@@ -66,22 +66,6 @@ if (isset($_GET['status'])) {
                             <a href="excluir_cursos.php?id=<?php echo $value->id; ?>">
                                 <button type="button" class="btn btn-danger">Excluir</button>
                             </a>
-                        <?php  
-                                if(isset($_POST['professor'])) {
-                            
-                                if(!empty($_POST['professor'])) {
-
-                                    $obcursos->professor = $_POST['professor'];
-                                }
-
-                                if(empty($_POST['professor'])) {
-
-                                    echo '<a href="index_professores.php?id=<?php echo $value->id; ?>">
-                                    Não há professor no momento
-                                    <button type="button" class="btn btn-success">Cadastrar Professor</button>
-                                </a>';
-                            }
-                    }?>
 
                         </td>
                     </tr>

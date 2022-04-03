@@ -28,11 +28,16 @@
             <textarea class="form-control" required name="ordem" rows="1"><?php echo isset($obCurso->ordem) ? $obCurso->ordem : ''; ?></textarea>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>Professor</label>
-            <textarea class="form-control" required name="professor" rows="1"><?php echo isset($obCurso->professor) ? $obCurso->professor : ''; ?></textarea>
-        </div>
-
+            <select class="form-control" name="professor">
+                <option value="">Selecione um Professor</option>
+                    $sql = mysql_query("select * from professores"); //nome da sua tabela
+                    while ($row = mysql_fetch_array($sql)) {
+                    echo '<option value="'.$row['id'].'">'.$row['nome'].'</option>';
+                    }
+                    </select>
+        </div> -->
         <div class="form-group">
             <label>Data</label>
             <input type="date" required class="form-control" name="data" value="<?php echo isset($obCurso->data) ? date('Y-m-d',strtotime($obCurso->data)) : ''; ?>">     
