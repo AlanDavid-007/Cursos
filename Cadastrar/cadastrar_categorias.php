@@ -1,8 +1,8 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '../../vendor/autoload.php';
 
 define('TITLE', 'Cadastrar Categoria');
-define('HREF', 'cadastrar_categorias.php');
+define('HREF', '../Cadastrar/cadastrar_categorias.php');
 define('BUTTONTEXT', ' Cadastrar Categoria');
 
 //adaptar
@@ -20,12 +20,12 @@ if (isset($_POST['nome'], $_POST['descricao'], $_POST['ordem'], $_POST['status']
     $obCategoria->cadastrar();
     // echo "<pre>"; print_r($obCategoria); echo "</pre>"; exit; 
 
-    header('location: index_categorias.php?status=success');
+    header('location: ../Index/index_categorias.php?status=success');
     exit;
 }
 
-require __DIR__ . '/INCLUDES/header_editar.php';
+require __DIR__ . '../../INCLUDES/header_editar.php';
 
-require __DIR__ . '/INCLUDES/formulario_categorias.php';
+require __DIR__ . '../../INCLUDES/formulario_categorias.php';
 
-require __DIR__ . '/INCLUDES/footer.php';
+require __DIR__ . '../../INCLUDES/footer.php';

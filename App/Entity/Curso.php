@@ -4,14 +4,30 @@ namespace App\Entity;
 
 use \App\Db\Database;
 use \PDO;
+use \App\Entity\Professor;
+use \App\Entity\Categoria;
 
 
+
+// echo "<pre>"; print_r($listaProfessor); echo "</pre>"; exit;
 
 
 // mudar dados
 
 class Curso
 {
+    /** 
+     * Objeto de professor
+     * @var object
+     */
+    public $obProfessores;
+
+    /** 
+     * Objeto de professor
+     * @var object
+     */
+    public $obCategorias;
+
     /** 
      * Identificador único da Curso
      * @var integer
@@ -64,7 +80,6 @@ class Curso
     public function cadastrar()
     {
         // echo "<pre>"; print_r($this); echo "</pre>"; exit;
-        $professor = ('SELECT nome FROM professores');
         //Inserir a Curso no banco e retornar o ID
         $objDatabase = new Database('cursos');
         $this->id = $objDatabase->insert([
@@ -72,7 +87,8 @@ class Curso
             'palavra_chave' => $this->palavra_chave,
             'valor'=> $this->valor,
             'ordem'=> $this->ordem,
-            '$professor'=> $this->$professor,
+            'professor'=> $this->professor,
+            'categoria'=> $this->categoria,
             'data' => $this->data,
             'status' => $this->status,
             
@@ -95,9 +111,27 @@ class Curso
     public static function getCursos($where = null, $order = null, $limit = null)
     {
 
+        $obProfessores = new Professor;
+        $obCategorias = new Categoria;
         $objDatabase = new Database('cursos');
 
-        return ($objDatabase)->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
+        $return = ($objDatabase)->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS, self::class);
+        $result = array();
+
+        foreach ($return as $key => $value) {
+            $result[$key]['id'] = $value->id;
+            $result[$key]['nome'] = $value->nome;
+            $result[$key]['data'] = $value->data;
+            $result[$key]['palavra_chave'] = $value->palavra_chave;
+            $result[$key]['valor'] = $value->valor;
+            $result[$key]['ordem'] = $value->ordem;
+            $result[$key]['status'] = $value->status;
+            $result[$key]['professor'] = $obProfessores::getProfessor($value->professor);
+            $result[$key]['categoria'] = $obCategorias::getCategoria($value->categoria);
+        }
+
+        // echo "<pre>"; print_r($result); echo "</pre>"; exit;
+        return $result;
     }
 
     /**
@@ -133,7 +167,7 @@ class Curso
      */
     public function atualizar()
     {
-        $professor = ('SELECT nome FROM professores');
+        
         //Definir a data
         $this->data = date('Y-m-d');
 
@@ -144,7 +178,8 @@ class Curso
             'palavra_chave' => $this->palavra_chave,
             'valor'=> $this->valor,
             'ordem'=> $this->ordem,
-            '$professor'=> $this->$professor,
+            'professor'=> $this->professor,
+            'categoria'=> $this->categoria,
             'data' => $this->data,
             'status' => $this->status,
         ]);

@@ -1,6 +1,6 @@
 <!-- adaptar para curso, Curso e professor - criar tres formularios separados -->
 <section class="formulario">
-    <a href="index_cursos.php">
+    <a href="../Index/index_cursos.php">
         <button class="btn btn-success">Voltar</button>
     </a>
 
@@ -17,7 +17,7 @@
             <textarea class="form-control" required name="palavra_chave" rows="5"><?php echo isset($obCurso->palavra_chave) ? $obCurso->palavra_chave : ''; ?></textarea>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
             <label>Valor</label>
             <textarea class="form-control" required name="valor" rows="1"><?php echo isset($obCurso->valor) ? $obCurso->valor : ''; ?></textarea>
         </div>
@@ -27,23 +27,29 @@
             <textarea class="form-control" required name="ordem" rows="1"><?php echo isset($obCurso->ordem) ? $obCurso->ordem : ''; ?></textarea>
         </div>
 
- <!-- <div class="form-group">
+        <div class="form-group">
             <label>Professor</label>
-            <select class="form-control" name="$professor" value="">
+            <select class="form-control" name="professor" value="">
                 <option value="">Selecione um Professor</option>
-               
-                use \App\Db\Database;
-
-                 $professor = mysql_query('SELECT nome FROM professores'); 
-                 while($prod = mysql_fetch_array($professor)) 
-                 <option value="<?php echo $prod['id'] ?>"><?php echo $prod['nome'] ?> </option> 
-                 ?>
-                     
+                <?php foreach($listaProfessor as $key => $value) { ?>
+                    <option value="<?php echo $value->id; ?>"><?php echo $value->nome . ' ' . $value->sobrenome; ?></option>
+                <?php } ?>
             </select>
-        </div>  -->
+        </div>
+
+        <div class="form-group">
+            <label>Categoria</label>
+            <select class="form-control" name="categoria" value="">
+                <option value="">Selecione uma Categoria</option>
+                <?php foreach($listaCategoria as $key => $value) { ?>
+                    <option value="<?php echo $value->id; ?>"><?php echo $value->nome; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+
         <div class="form-group">
             <label>Data</label>
-            <input type="date" required class="form-control" name="data" value="<?php echo isset($obCurso->data) ? date('Y-m-d',strtotime($obCurso->data)) : ''; ?>">     
+            <input type="date" required class="form-control" name="data" value="<?php echo isset($obCurso->data) ? date('Y-m-d', strtotime($obCurso->data)) : ''; ?>">
         </div>
 
         <div class="form-group">
@@ -68,4 +74,4 @@
             <button type="submit" class="btn btn-success">Enviar</button>
         </div>
     </form>
-</section> 
+</section>

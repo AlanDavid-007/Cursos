@@ -41,6 +41,7 @@ if (isset($_GET['status'])) {
                     <th>Valor</th>
                     <th>Ordem</th>
                     <th>Professor</th>
+                    <th>Categoria</th>
                     <th>Data</th>
                     <th>Status</th>
                     <th>Ações</th> <!-- Para editar, ver cursos e excluir -->
@@ -49,23 +50,24 @@ if (isset($_GET['status'])) {
 
             <tbody>
                 <?php foreach ($cursos as $key => $value) { 
-                    $professor = ('SELECT nome FROM professores'); 
                     ?>
                     <tr>
-                        <td><?php echo $value->id; ?></td>
-                        <td><?php echo $value->nome; ?></td>
-                        <td><?php echo $value->palavra_chave; ?></td>
-                        <td><?php echo $value->valor; ?></td>
-                        <td><?php echo $value->ordem; ?></td>
-                        <td><?php echo $value->$professor; ?></td>
-                        <td><?php echo $value->data; ?></td>
-                        <td><?php echo ($value->status == 's' ? 'Ativo' : 'Inativo'); ?></td>
+                        <td><?php echo $value['id']; ?></td>
+                        <td><?php echo $value['nome']; ?></td>
+                        <td><?php echo $value['palavra_chave']; ?></td>
+                        <td><?php echo $value['valor']; ?></td>
+                        <td><?php echo $value['ordem']; ?></td>
+                        
+                        <td><?php echo $value['professor']->nome . ' ' . $value['professor']->sobrenome; ?></td>
+                        <td><?php echo $value['categoria']->nome; ?></td>
+                        <td><?php echo $value['data']; ?></td>
+                        <td><?php echo ($value['status'] == 's' ? 'Ativo' : 'Inativo'); ?></td>
                         <td>
-                            <a href="editar_cursos.php?id=<?php echo $value->id; ?>">
+                            <a href="../Editar/editar_cursos.php?id=<?php echo $value['id']; ?>">
                                 <button type="button" class="btn btn-primary">Editar</button>
                             </a>
 
-                            <a href="excluir_cursos.php?id=<?php echo $value->id; ?>">
+                            <a href="../Excluir/excluir_cursos.php?id=<?php echo $value['id']; ?>">
                                 <button type="button" class="btn btn-danger">Excluir</button>
                             </a>
 

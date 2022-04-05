@@ -1,6 +1,6 @@
 <!-- adaptar para exclusão de curso, categoria e professor -->
 <section>
-    <a href="index_cursos.php">
+    <a href="../Index/index_cursos.php">
         <button class="btn btn-success">Voltar</button>
     </a>
 

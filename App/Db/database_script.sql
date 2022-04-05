@@ -18,15 +18,15 @@ CREATE TABLE `cursos` (
   `data` TIMESTAMP NULL DEFAULT NULL,
   `palavra_chave`VARCHAR(30)DEFAULT NULL,
   `valor` FLOAT (50) DEFAULT NULL,
-  `professor` VARCHAR(255) DEFAULT NULL,
+  `professor` INT DEFAULT NULL,
+  `categoria` INT DEFAULT NULL,
   `ordem` INT DEFAULT NULL,
   `status` enum('s','n') DEFAULT NULL,
-  `fk_categorias`int(11) NOT NULL, 
   PRIMARY KEY (`id`)
 );
 
 ALTER TABLE cursos ADD CONSTRAINT id_professor FOREIGN KEY(professor) REFERENCES professores (id);
-ALTER TABLE cursos ADD CONSTRAINT id_fk_categorias FOREIGN KEY(fk_categorias) REFERENCES categorias (id);
+ALTER TABLE cursos ADD CONSTRAINT id_categorias FOREIGN KEY(categoria) REFERENCES categorias (id);
 
 CREATE TABLE `professores`(
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -39,8 +39,6 @@ CREATE TABLE `professores`(
   `email` VARCHAR (100) NOT NULL,
   `ordem` INT DEFAULT NULL,
   `status` enum('s','n') DEFAULT NULL,
-  `fk_cursos`int(11) NOT NULL, 
     PRIMARY KEY (`id`)
 );
 
-ALTER TABLE professores ADD CONSTRAINT id_fk_cursos FOREIGN KEY(fk_cursos) REFERENCES cursos (id);

@@ -21,7 +21,7 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Bem Vindo a <span>Cursos</span></h2>
-              <a href="index_categorias.php" class="btn10 btn-get-started">Ver mais</a>
+              <a href="Index/index_categorias.php" class="btn10 btn-get-started">Ver mais</a>
             </div>
           </div>
         </div>

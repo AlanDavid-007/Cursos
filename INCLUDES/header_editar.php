@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/styles.css">
   <title>Cursos</title>
 
 </head>
@@ -16,7 +16,7 @@
 <body class="text-light">
   <div class="container m-auto">
   <header class="header">
-            <a href="index.php" class="header__logo"></a>
+            <a href="../index.php" class="header__logo"></a>
 
             <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
 
@@ -31,15 +31,15 @@
                         </div>
                         
                         <div>
-                            <a href="#" class="nav__name" style="text-decoration: none;">CURSOS</a>
+                            <a href="../index.php" class="nav__name" style="text-decoration: none;">CURSOS</a>
                         </div>
                     </div>
     
                     <div class="nav__menu">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="index_categorias.php" class="nav__link">Categorias</a></li>
-                            <li class="nav__item"><a href="index_cursos.php" class="nav__link">Cursos</a></li>
-                            <li class="nav__item"><a href="index_professores.php" class="nav__link">Professores</a></li>
+                        <li class="nav__item"><a href="../Index/index_categorias.php" class="nav__link">Categorias</a></li>
+                            <li class="nav__item"><a href="../Index/index_cursos.php" class="nav__link">Cursos</a></li>
+                            <li class="nav__item"><a href="../Index/index_professores.php" class="nav__link">Professores</a></li>
                         </ul>
                     </div>
     

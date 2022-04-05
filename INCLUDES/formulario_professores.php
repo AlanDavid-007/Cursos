@@ -1,7 +1,7 @@
 <!-- adaptar para Professor, Professor e professor - criar tres formularios separados -->
 
 <section class="formulario">
-    <a href="index_professores.php">
+    <a href="../Index/index_professores.php">
         <button class="btn btn-success">Voltar</button>
     </a>
 

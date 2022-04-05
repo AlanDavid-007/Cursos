@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '../../vendor/autoload.php';
 //adaptar
 define('TITLE', 'Editar Professor');
 
@@ -7,7 +7,7 @@ use \App\Entity\Professor;
 
 //Validação do ID
 if (!isset($_GET['id'])  || !is_numeric($_GET['id'])) {
-    header('location: index_professores.php?status=error');
+    header('location: ../Index/index_professores.php?status=error');
     exit;
 }
 
@@ -17,7 +17,7 @@ $obProfessor = Professor::getProfessor($_GET['id']);
 
 //Validação da Vaga
 if (!$obProfessor instanceof Professor) {
-    header('location: index_professores.php?status=error');
+    header('location: ../Index/index_professores.php?status=error');
     exit;
 }
 //Validação do POST
@@ -35,13 +35,13 @@ if (isset($_POST['nome'],$_POST['sobrenome'],$_POST['cpf'],$_POST['formacao'],$_
     $obProfessor->atualizar();
     // echo "<pre>"; print_r($obProfessor); echo "</pre>"; exit; 
 
-    header('location: index_professores.php?status=success');
+    header('location: ../Index/index_professores.php?status=success');
     exit;
 }
 
 
-require __DIR__ . '/INCLUDES/header_editar.php';
+require __DIR__ . '../../INCLUDES/header_editar.php';
 
-require __DIR__ . '/INCLUDES/formulario_professores.php';
+require __DIR__ . '../../INCLUDES/formulario_professores.php';
 
-require __DIR__ . '/INCLUDES/footer.php';
+require __DIR__ . '../../INCLUDES/footer.php';
