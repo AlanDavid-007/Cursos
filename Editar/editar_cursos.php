@@ -4,7 +4,6 @@ require __DIR__ . '../../vendor/autoload.php';
 define('TITLE', 'Editar Curso');
 
 use \App\Entity\Curso;
-$professor = ('SELECT nome FROM professores');
 
 //Validação do ID
 if (!isset($_GET['id'])  || !is_numeric($_GET['id'])) {
