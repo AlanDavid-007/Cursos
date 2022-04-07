@@ -3,7 +3,16 @@ require __DIR__ . '../../vendor/autoload.php';
 //adaptar
 define('TITLE', 'Editar Curso');
 
+use App\Entity\Categoria;
 use \App\Entity\Curso;
+use \App\Entity\Professor;
+
+$obCurso = new Curso;
+$obProfessores = new Professor;
+$obCategorias = new Categoria;
+
+$listaProfessor = $obProfessores::getProfessores();
+$listaCategoria = $obCategorias::getCategorias();
 
 //Validação do ID
 if (!isset($_GET['id'])  || !is_numeric($_GET['id'])) {
@@ -21,7 +30,7 @@ if (!$obCurso instanceof Curso) {
     exit;
 }
 //Validação do POST
-if (isset($_POST['nome'], $_POST['palavra_chave'],$_POST['valor'], $_POST['ordem'],$_POST['professor'],$_POST['categoria'],$_POST['data'], $_POST['status'])) {
+if (isset($_POST['nome'], $_POST['palavra_chave'], $_POST['valor'], $_POST['ordem'], $_POST['professor'], $_POST['categoria'], $_POST['data'], $_POST['status'])) {
 
     $obCurso->nome = $_POST['nome'];
     $obCurso->palavra_chave = $_POST['palavra_chave'];

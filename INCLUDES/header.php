@@ -10,8 +10,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <!-- My Assets -->
   <link rel="stylesheet" href="../Assets/CSS/styles.css">
-  
+  <!-- Title -->
   <title>Cursos</title>
 
 </head>
@@ -68,23 +71,29 @@
         <h1><?php echo TITLE ?></h1>
         <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
       </div>
-
-      <a class="m-auto" href="<?php echo HREF ?>" style="padding:20px; margin-left:30%;">
-        <button class="btn btn-success btn-lg"><?php echo BUTTONTEXT ?></button>
+      <div class="wrap" style="padding:20px; margin-left:20%;">
+      <a class="m-auto" href="<?php echo HREF ?>">
+        <button class="btn btn-header btn-lg"><?php echo BUTTONTEXT ?></button>
       </a>
+      </div>
     </section>
     <br>
     <div class="filtro">
 
-      <input class="form-control" id="filtroCards" type="text" placeholder="Search.." onkeyup="aplicaFiltroCards()">
+      <input class="form-control" id="filtroCards" type="text" placeholder="Search..">
 
     </div>
     <br>
+    <div class='box'>
+  <div class='wave -one'></div>
+  <div class='wave -two'></div>
+  <div class='wave -three'></div>
+</div>
     <script>
       $(document).ready(function() {
         $("#filtroCards").on("keyup", function() {
           var value = $(this).val().toLowerCase();
-          $(".card , .card-body, .card-title, .card-text").filter(function() {
+          $(".card ").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
           });
         });

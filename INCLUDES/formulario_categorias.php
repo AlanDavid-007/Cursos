@@ -2,7 +2,7 @@
 
 <section class="formulario">
     <a href="../Index/index_categorias.php">
-        <button class="btn btn-success">Voltar</button>
+        <button class="btn btn btn-header btn-lg">Voltar</button>
     </a>
 
     <h2 class="mt-3"><?php echo TITLE ?></h2>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-success">Enviar</button>
+            <button type="submit" class="btn btn-header btn-lg">Enviar</button>
         </div>
     </form>
 </section> 
