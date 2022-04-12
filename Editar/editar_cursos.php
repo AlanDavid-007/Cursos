@@ -21,11 +21,20 @@ if (!isset($_GET['id'])  || !is_numeric($_GET['id'])) {
 }
 
 //Consulta Vaga
-$obCurso = Curso::getCurso($_GET['id']);
+$obCurso = $obCurso::getCurso($_GET['id']);
 // echo "<pre>"; print_r($obCurso); echo "<pre>"; exit;
 
 //Validação da Vaga
-if (!$obCurso instanceof Curso) {
+if (!$obCurso instanceof $obCurso) {
+    header('location: ../Index/index_cursos.php?status=error');
+    exit;
+}
+//Consulta Vaga
+$obProfessor = $obProfessores::getProfessor($_GET['id']);
+// echo "<pre>"; print_r($obCurso); echo "<pre>"; exit;
+
+//Validação da Vaga
+if (!$obProfessor instanceof $obProfessores) {
     header('location: ../Index/index_cursos.php?status=error');
     exit;
 }
