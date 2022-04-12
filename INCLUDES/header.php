@@ -1,27 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <title>Cursos</title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/x-icon" href="../Assets/logo.ico">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../Assets/CSS/styles.css">
   
-</head>
-<!-- mudar estilo -->
-  <body class="text-light">
-      <div class="container">
-          <header class="jumbotron bg-primary" style="display: inline-flex; width: 100%;">
-          <div class="texts">
-                <h1>Cadastro de Cursos</h1>
-                <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
-                </div>
-                <a href="cadastrar" style="padding:20px; margin-left:30%;">
-        <button class="btn btn-success btn-lg">Cadastrar</button>
-    </a>
-            </header>   
+  <title>Cursos</title>
 
-    
+</head>
+
+<body class="text-light">
+  <div class="container m-auto">
+    <header class="header">
+      <a href="../index.php" class="header__logo"></a>
+
+      <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+      <nav class="nav " id="nav-menu">
+        <div class="nav__content bd-grid">
+
+          <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+          <div class="nav__perfil">
+            <div class="nav__img">
+              <img src="../Assets/logo.png" alt="">
+            </div>
+
+            <div>
+              <a href="../index.php" class="nav__name" style="text-decoration: none;">CURSOS</a>
+            </div>
+          </div>
+
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="../Index/index_categorias.php" class="nav__link">Categorias</a></li>
+              <li class="nav__item"><a href="../Index/index_cursos.php" class="nav__link">Cursos</a></li>
+              <li class="nav__item"><a href="../Index/index_professores.php" class="nav__link">Professores</a></li>
+            </ul>
+          </div>
+
+          <div class="nav__social">
+            <a href="https://github.com/AlanDavid-007/Cursos/" class="nav__social-icon">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <section class="header2 m-auto d-flex p-2 bd-highlight">
+      <div class="texts">
+        <h1><?php echo TITLE ?></h1>
+        <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
+      </div>
+
+      <a class="m-auto" href="<?php echo HREF ?>" style="padding:20px; margin-left:30%;">
+        <button class="btn btn-success btn-lg"><?php echo BUTTONTEXT ?></button>
+      </a>
+    </section>
+    <br>
+    <div class="filtro">
+
+      <input class="form-control" id="filtroCards" type="text" placeholder="Search.." onkeyup="aplicaFiltroCards()">
+
+    </div>
+    <br>
+    <script>
+      $(document).ready(function() {
+        $("#filtroCards").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $(".card , .card-body, .card-title, .card-text").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="../Assets/JS/navbar.js"></script>
