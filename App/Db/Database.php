@@ -24,7 +24,7 @@ class Database
      * Nome do Banco de dados
      * @var string
      */
-    const NAME = 'noticias'; //Mesmo nome do banco de dados criado
+    const NAME = 'cursos'; //Mesmo nome do banco de dados criado
 
     /** 
      * Usuário do Banco de dados
@@ -74,6 +74,7 @@ class Database
         }
     }
 
+    
     /** 
      * Método responsável por executar querys no banco de dados (útil para querys de consulta)
      * @params string query
