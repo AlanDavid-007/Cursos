@@ -14,6 +14,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <!-- My Assets -->
   <link rel="stylesheet" href="../Assets/CSS/styles.css">
+  <script src="../Assets/JS/navbar.js"></script>
   <!-- Title -->
   <title>Cursos</title>
 
