@@ -162,7 +162,7 @@ class professor
             'cpf'=> $this->cpf,
             'formacao' => $this->formacao,
             'endereco' => $this->endereco,
-            'telefone' => $this->data,
+            'telefone' => $this->telefone,
             'email' => $this->email,
             'ordem' => $this->ordem,
             'status' => $this->status,

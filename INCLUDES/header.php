@@ -67,30 +67,18 @@
       <br>
       <br>
     </div>
-    <section class="header2 m-auto d-flex p-2 bd-highlight">
-      <div class="texts">
-        <h1><?php echo TITLE ?></h1>
-        <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
-      </div>
-      <div class="wrap" style="padding:20px; margin-left:20%;">
-      <a class="m-auto" href="<?php echo HREF ?>">
-        <button class="btn btn-header btn-lg"><?php echo BUTTONTEXT ?></button>
-      </a>
-      </div>
-    </section>
-    <br>
-    <div class="filtro">
+    <!-- <div class="filtro">
 
       <input class="form-control" id="filtroCards" type="text" placeholder="Search..">
 
-    </div>
+    </div> -->
     <br>
     <div class='box'>
   <div class='wave -one'></div>
   <div class='wave -two'></div>
   <div class='wave -three'></div>
 </div>
-    <script>
+    <!-- <script>
       $(document).ready(function() {
         $("#filtroCards").on("keyup", function() {
           var value = $(this).val().toLowerCase();
@@ -99,7 +87,7 @@
           });
         });
       });
-    </script>
+    </script> -->
     <!-- ===== IONICONS ===== -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 

@@ -1,15 +1,49 @@
 <!-- aqui iremos fazer divs com as cursos(dps de clicar irá aparecer os cursos/cadastro de curso e dentro o de prof)-->
 
+<section class="header2 position-absolute m-auto d-flex p-2 bd-highlight">
+    <div class="texts">
+        <h1><?php echo TITLE ?></h1>
+        <p>Formulário criado para cadastro de Cursos, categorias e professores</p>
+    </div>
+    <div class="wrap" style="padding:20px; margin-left:20%;">
+        <a class="m-auto" href="<?php echo HREF ?>">
+            <button class="btn btn-header btn-lg"><?php echo BUTTONTEXT ?></button>
+        </a>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section>
+    <form method="get">
+        <div class="row">
+            <div class="col">
+                <label>Filtrar Nome</label>
+                <input type="text" name="busca" class="form-control" value="<?= $busca ?>">
+            </div>
+            <div class="col d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">filtrar</button>
+            </div>
+        </div>
+    </form>
+</section>
 <?php
 
 $mensagem = '';
 if (isset($_GET['status'])) {
     switch ($_GET['status']) {
         case 'success':
-            $mensagem = '<div class="alert alert-success">Ação executada com sucesso!</div>';
+            $mensagem = '<div class="alert alert-success mt-3">Ação executada com sucesso!</div>';
             break;
         case 'error':
-            $mensagem = '<div class="alert alert-danger">Ação não executada!</div>';
+            $mensagem = '<div class="alert alert-danger mt-3">Ação não executada!</div>';
             break;
         default:
             # code...
@@ -23,8 +57,6 @@ if (isset($_GET['status'])) {
         <?php echo $mensagem; ?>
     </section>
 <?php } ?>
-
-
 <section>
 
     <?php if (count($cursos) == 0) { ?>
@@ -32,7 +64,7 @@ if (isset($_GET['status'])) {
     <?php } else { ?>
         <?php foreach ($cursos as $key => $value) { ?>
 
-            <div class="card bg-dark" id="table-listagem">
+            <div class="card bg-dark mt-3" id="table-listagem">
                 <h5 class="card-header"><?php echo $value['nome']; ?></h5>
                 <div class="card-body" id="myTable">
                     <h5 class="card-title">Id:<?php echo $value['id']; ?></h5>

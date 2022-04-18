@@ -73,26 +73,6 @@ body {
   background-position: 0% 50%;
 }
 }  */
-#table-listagem {
-  /* background-image: linear-gradient(to left, #cd86ae, #c682b9, #b981c5, #a781d2, #8c83de, #748fec, #529bf7, #00a6fe, #00bafe, #00c9e1, #00d2ab, #06d669);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite; */
-  margin-top: 5%;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /*formulario*/
 .formulario {
