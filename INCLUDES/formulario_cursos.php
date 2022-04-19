@@ -32,7 +32,7 @@
             <select class="form-control" name="professor" value="">
                 <option value="">Selecione um Professor</option>
                 <?php foreach($listaProfessor as $key => $value) { ?>
-                    <option value="<?php echo $value->id; ?>" <?php echo $obProfessor->id == $value->id ? "selected" : '' ;?>> <?php echo $value->nome . ' ' . $value->sobrenome; ?></option>
+                    <option value="<?php echo $value->id; ?>" <?php echo $obCurso->id == $value->id ? "selected" : '' ;?>> <?php echo $value->nome . ' ' . $value->sobrenome; ?></option>
                 <?php } ?>
             </select>
         </div>
