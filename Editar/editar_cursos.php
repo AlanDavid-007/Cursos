@@ -29,15 +29,7 @@ if (!$obCurso instanceof $obCurso) {
     header('location: ../Index/index_cursos.php?status=error');
     exit;
 }
-//Consulta Vaga
-$obProfessor = $obProfessores::getProfessor($_GET['id']);
-// echo "<pre>"; print_r($obCurso); echo "<pre>"; exit;
 
-//Validação da Vaga
-if (!$obProfessor instanceof $obProfessores) {
-    header('location: ../Index/index_cursos.php?status=error');
-    exit;
-}
 //Validação do POST
 if (isset($_POST['nome'], $_POST['palavra_chave'], $_POST['valor'], $_POST['ordem'], $_POST['professor'], $_POST['categoria'], $_POST['data'], $_POST['status'])) {
 

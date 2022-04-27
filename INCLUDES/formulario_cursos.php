@@ -31,18 +31,17 @@
             <label>Professor</label>
             <select class="form-control" name="professor" value="">
                 <option value="">Selecione um Professor</option>
-                <?php foreach($listaProfessor as $key => $value) { ?>
-                    <option value="<?php echo $value->id; ?>" <?php echo $obCurso->id == $value->id ? "selected" : '' ;?>> <?php echo $value->nome . ' ' . $value->sobrenome; ?></option>
+                <?php foreach ($listaProfessor as $key => $value) { ?>
+                    <option value="<?php echo $value->id; ?>" <?php echo $obCurso->professor == $value->id ? "selected" : ''; ?>> <?php echo $value->nome . ' ' . $value->sobrenome; ?></option>
                 <?php } ?>
             </select>
         </div>
         <div class="form-group">
             <label>Categoria</label>
             <select class="form-control" name="categoria" value="">
-                <option value="0">Selecione uma Categoria</option>
-
-                <?php foreach($listaCategoria as $key => $value) { ?>
-                    <option value="<?php echo $value->id; ?>" <?php echo $obCurso->id == $value->id ? "selected" : '' ;?>> <?php echo $value->nome ?></option>
+                <option value="">Selecione uma Categoria</option>
+                <?php foreach ($listaCategoria as $key => $value) { ?>
+                    <option value="<?php echo $value->id; ?>" <?php echo $obCurso->categoria == $value->id ? "selected" : ''; ?>> <?php echo $value->nome; ?></option>
                 <?php } ?>
             </select>
         </div>
